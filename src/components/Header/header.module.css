@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+
+.header{
+margin: 0;
+padding: 0;
+}
+
+.header::after{
+    content: '';
+    display: block;
+    height: 3px;
+    background: #beee62;
+    }
+
+.container{
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1500px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+
+.header__information{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.header__button{
+    cursor: pointer;
+    font-family: 'Balsamiq Sans', sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+    color: #3c6e71;
+    border: 3px solid #beee62;
+    background-color: #beee62;
+    padding: 10px 20px;
+    border-radius: 26px;
+}
+.header__button:hover{
+    color: #70ae6e;
+    border: 3px solid #f4743b;
+    background-color: #f4743b;
+}
+
+
+

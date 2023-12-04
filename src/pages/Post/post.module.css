@@ -1,0 +1,31 @@
+.post{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    color: #3c6e71;
+    font-family: 'Balsamiq Sans', sans-serif;
+    max-width: 1500px;
+    padding: 20px;
+    margin: 20px auto;
+}
+.post__info{
+display: flex;
+align-self: stretch;
+justify-content: space-between;
+}
+
+.post__title{
+    font-size: 40px;
+}
+
+.post__img{
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+.post__text{
+    font-size: 25px;
+    line-height:37.5px;
+    text-indent: 20px; 
+}

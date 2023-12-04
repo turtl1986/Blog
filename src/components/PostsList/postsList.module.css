@@ -1,0 +1,25 @@
+.postsList{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.postsList article:nth-child(4n+1){
+    border: 3px solid #beee62;
+    background-color: #beee62;
+    color: #3c6e71;
+}
+.postsList article:nth-child(4n+2){
+    border: 3px solid #f4743b;
+    background-color: #f4743b;
+    color:  #70ae6e;
+}
+.postsList article:nth-child(4n+3){
+    border: 3px solid #3c6e71;
+    background-color: #3c6e71;
+    color:  #beee62;
+}
+.postsList article:nth-child(4n+4){
+    border: 3px solid  #70ae6e;
+    background-color: #70ae6e;
+    color:  #f4743b;
+}
