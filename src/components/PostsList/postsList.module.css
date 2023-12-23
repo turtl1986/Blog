@@ -1,6 +1,15 @@
-.postsList{
+.container{
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1500px;
     display: flex;
     flex-direction: column;
+    gap:30px;
+}
+
+.postsList{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     gap: 20px;
 }
 .postsList article:nth-child(4n+1){
@@ -13,13 +22,58 @@
     background-color: #f4743b;
     color:  #70ae6e;
 }
+
 .postsList article:nth-child(4n+3){
+    border: 3px solid  #70ae6e;
+    background-color: #70ae6e;
+    color:  #f4743b;
+}
+
+.postsList article:nth-child(4n+4){
     border: 3px solid #3c6e71;
     background-color: #3c6e71;
     color:  #beee62;
 }
-.postsList article:nth-child(4n+4){
-    border: 3px solid  #70ae6e;
-    background-color: #70ae6e;
-    color:  #f4743b;
+
+.postsList__pagination{
+    align-self: center;
+}
+
+.loader {
+    align-self: center;
+    width: 520px;
+    height: 20px;
+    border-radius: 20px;
+    background:
+     repeating-linear-gradient(135deg,#f03355 0 10px,#ffa516 0 20px) 0/0%   no-repeat,
+     repeating-linear-gradient(135deg,#ddd    0 10px,#eee    0 20px) 0/100%;
+    animation: l3 2s infinite;
+  }
+
+  @keyframes l3 {
+      100% {background-size:100%}
+  }
+
+
+@media screen and (min-width: 768px) and (max-width:1023px)
+{
+    .container{
+        max-width: 1023px;
+        margin: 20px auto;
+   }
+}
+
+   @media screen and (max-width: 768px) 
+{
+    .container{
+    max-width: 768px;
+    margin: auto;
+   }
+
+   .postsList{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 10px;
+}
+
 }

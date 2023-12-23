@@ -21,27 +21,24 @@ align-items: center;
 justify-content: space-between;
 }
 
-
 .header__information{
     display: flex;
     align-items: center;
     gap: 20px;
 }
-.header__button{
-    cursor: pointer;
-    font-family: 'Balsamiq Sans', sans-serif;
-    font-weight: bold;
-    font-size: 23px;
-    color: #3c6e71;
-    border: 3px solid #beee62;
-    background-color: #beee62;
-    padding: 10px 20px;
-    border-radius: 26px;
+
+@media screen and (min-width: 768px) and (max-width:1023px)
+{
+    .container{
+        max-width: 1023px;
+   }
 }
-.header__button:hover{
-    color: #70ae6e;
-    border: 3px solid #f4743b;
-    background-color: #f4743b;
+
+   @media screen and (max-width: 768px) 
+{
+    .container{
+    max-width: 768px;
+   }
 }
 
 

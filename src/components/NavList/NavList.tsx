@@ -1,19 +1,15 @@
 import navListStyle from './navList.module.css'
+import _ from 'lodash'
 
-export const NavList=()=>{
+interface SearchControlProps {
+	onChange: (value: string) => void
+}
 
+export const NavList=({ onChange }: SearchControlProps)=>{
+
+    const debounce = _.debounce((event: React.ChangeEvent<HTMLInputElement>) => onChange( event?.target?.value), 300)
 
 return(
-<aside className={navListStyle.navList}>
-    <input placeholder='Search...' className={navListStyle.navList__search} type="search" name="search" id="search" />
-<ul className={navListStyle.navList__list}>
-<li className={navListStyle.navList__item}>басня</li>
-<li className={navListStyle.navList__item}>миф</li>
-<li className={navListStyle.navList__item}>роман</li>
-<li className={navListStyle.navList__item}>комедия</li>
-<li className={navListStyle.navList__item}>ода</li>
-</ul>
-
-</aside>
+    <input placeholder='Search...' onChange={(event) => debounce(event)} className={navListStyle.navList__search} type="search" name="search" id="search" />
 )
 }

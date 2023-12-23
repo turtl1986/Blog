@@ -1,13 +1,10 @@
-import Api from "../api";
-import { BlogAll } from "./types";
+import Api from '../api'
+import { PostsResponse } from './types'
 
-class BlogsApi extends Api{
-    endpointAll='ictures'
-  async fetchAll(): Promise<BlogAll[]>{
-    const {data}=await this.api.get<BlogAll[]>(this.endpointAll)
-    return data
-  }
-  
+class PostsApi extends Api {
+	async fetchAll(limit: number, offset: number, searchParam = ''): Promise<PostsResponse> {
+		const { data } = await this.api.get<PostsResponse>(`/v4/articles/?limit=${limit}&offset=${offset}&search=${searchParam}`)
+		return data
+	}
 }
-
-export default new BlogsApi()
+export default new PostsApi()

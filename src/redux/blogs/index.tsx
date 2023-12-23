@@ -1,3 +1,3 @@
-import {blogSlice} from './slice'
+import {postsSlice} from './slice'
 export * from './slice'
-export const blogsReducer=blogSlice.reducer
+export const blogsReducer=postsSlice.reducer

@@ -2,24 +2,40 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    align-items: center;
     color: #3c6e71;
     font-family: 'Balsamiq Sans', sans-serif;
     max-width: 1500px;
     padding: 20px;
     margin: 20px auto;
+    align-items: center;
 }
 .post__info{
+    align-self: flex-start;
 display: flex;
-align-self: stretch;
-justify-content: space-between;
+gap:10px;
 }
 
 .post__title{
     font-size: 40px;
 }
 
+.post__site{
+font-size: 25px;
+}
+
+.post__url{
+    font-size: 25px; 
+    text-decoration: none;
+    color: #70ae6e;
+}
+
+.post__time{
+    font-size: 20px;
+    align-self: flex-start;
+}
+
 .post__img{
+    border-radius: 26px;
     height: auto;
     max-width: 100%;
     object-fit: contain;
@@ -29,3 +45,15 @@ justify-content: space-between;
     line-height:37.5px;
     text-indent: 20px; 
 }
+
+@media screen and (min-width: 768px) and (max-width:1023px)
+{
+    .post{
+    max-width: 1023px;
+   }}
+
+   @media screen and (max-width: 768px) 
+{
+    .container{
+        max-width: 768px;
+   }}

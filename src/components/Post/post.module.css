@@ -1,28 +1,19 @@
 .post{
     display: flex;
-    gap: 40px;
+    flex-direction: column;
+    gap: 5px;
     border-radius: 26px;
     padding: 20px;
     font-family: 'Balsamiq Sans', sans-serif;
-}
-
-.post__img{
-    height: auto;
-    max-width: 100%;
-    object-fit: contain;
-}
-
-.post__information{
-display: flex;
-flex-direction: column;
-gap: 10px;
+    align-items: flex-start;
 }
 
 .post__title{
     font-size: 25px;
     font-weight: bold;
+    cursor: pointer;
 }
 
-.post__description{
-    font-size: 25px;
+.post__text{
+    font-size: 15px;
 }
